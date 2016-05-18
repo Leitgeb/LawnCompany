@@ -1,0 +1,104 @@
+@mixin buttonHover($text, $outline, $background) {
+    .btn-outline {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $outline;
+    }
+
+    .btn-background {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: $background;
+      transition: 0.3s 0.05s ease;
+      z-index: -1;
+    }
+
+    .btn-background-center {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 0;
+    }
+
+    .btn-background-top {
+      top: -100%;
+    }
+
+    .btn-background-bottom {
+      bottom: -100%;
+    }
+
+    .btn:hover {
+      color: $text;
+      transition: color 0.3s 0.35s ease;
+      
+      .btn-background-center {
+        height: 100%;
+        transition: height 0.3s 0.35s ease;
+      }
+      
+      .btn-background-top {
+        top: 50%;
+        transition: top 0.3s 0.05s ease;
+      }
+      
+      .btn-background-bottom {
+        bottom: 50%;
+        transition: bottom 0.3s 0.05s ease;
+      }
+    }
+}
+
+@mixin navHover($text, $outline) {
+    .svg-wrapper {
+        height: 40px;
+        position: relative;
+        width: 127px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .shape {
+        fill: transparent;
+        stroke-dasharray: 120 540;
+        stroke-dashoffset: -170;
+        stroke-width: 3px;
+        stroke: $outline;
+    }
+
+    .text {
+        color: $text;
+        font-size: 1rem;
+        letter-spacing: 3px;
+        font-weight: 300;
+        position: relative;
+        top: -37px;
+        width: 127px;
+        height: 40px;
+    }
+
+    @keyframes draw {
+        0% {
+            stroke-dasharray: 120 540;
+            stroke-dashoffset: -170;
+            stroke-width: 3px;
+        }
+        100% {
+            stroke-dasharray: 760;
+            stroke-dashoffset: 0;
+            stroke-width: 2px;
+        }
+    }
+
+    .svg-wrapper:hover .shape {
+        -webkit-animation: 0.4s draw linear forwards;
+        animation: 0.4s draw linear forwards;
+    }
+}

@@ -1,0 +1,218 @@
+@import 'variables';
+@import 'mixins';
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: $text-color;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+  p {
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+}
+
+#header {
+  background-image: url("../img/feat-img.jpg");
+  background-size: cover;
+  background-position: 50% 0px;
+  overflow: hidden;
+  height: 100%;
+
+  .navbar-toggler {
+    color: white;
+  }
+
+  .phone {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    color: white;
+    font-weight: 300;
+    z-index: 1500;
+  }
+  
+  .phone-scroll-style {
+    color: $primary-color;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $overlay-color;
+  }
+
+  .hero-text {
+    position: relative;
+    margin: 190px auto;
+    color: white;
+    z-index: 50;
+
+    .btn {
+      position: relative;
+      height: 50px;
+      width: 290px;
+      line-height: 25px;
+      border-radius: 0;
+      overflow: hidden;
+      transition: color 0.3s 0.05s ease;
+      color: white;
+      font-weight: 300;
+    }
+    
+    @include buttonHover(white, white, $primary-color);
+
+  }
+}
+
+.main-nav {
+  background: transparent;
+  transition: all 0.4s;
+ 
+  .navbar-brand {
+    color: white;
+
+    h2 {
+      display: inline;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 300;
+    }
+
+    &:hover {
+      h2, i {
+        color: $nav-hover;
+      }
+    }
+  }
+
+  li {
+    height: 40px;
+    padding: 0 0;
+    @include navHover(white, white);
+  }
+}
+
+.nav-scroll-style {
+    background: transparentize(white, 0.3);
+     li {
+      @include navHover($primary-color, $primary-color);
+     }
+     
+     .navbar-brand {
+       color: $primary-color;
+     }
+  }
+  
+
+
+.about {
+  padding: 0;
+  
+  .card {
+      padding: 0;
+      
+      .card-block {
+        h4 {
+          color: $primary-color;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 300;
+          border-bottom: 1px solid $primary-color;
+          padding-bottom: 7px;
+        }
+        
+        .btn {
+          position: relative;
+          height: 52px;
+          width: 185px;
+          line-height: 26px;
+          border-radius: 0;
+          overflow: hidden;
+          transition: color 0.3s 0.05s ease;
+          color: $primary-color;
+          font-weight: 300;
+          letter-spacing: 2px;
+          z-index: 1; 
+        }
+        @include buttonHover(white, $primary-color, $primary-color);
+      }
+    }
+
+  .col-sm-5 {
+    padding: 0;
+    margin-bottom: 20px;
+
+    img {
+      border-radius: 25px;
+    }
+
+    h2 {
+      position: absolute;
+      top: 151px;
+      left: 30px;
+      color: white;
+      font-weight: 300;
+    }
+  }
+
+  h1 {
+    color: $primary-color;
+    font-weight: 100;
+    border-bottom: 1px solid $primary-color;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 25px;
+    background: $overlay-color;
+  }
+}
+
+.photos {
+  
+  h1 {
+    text-align: center;
+    color: $primary-color;
+    border-bottom: 1px solid $primary-color;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+  }
+    
+  .btn {
+    position: absolute;
+    bottom: 125px;
+    left: 40%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0; 
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: color 0.3s 0.05s ease;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  @include buttonHover(white, white, $primary-color);
+}
