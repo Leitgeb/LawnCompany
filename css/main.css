@@ -13,7 +13,7 @@ html, body {
     text-decoration: none; }
 
 #header {
-  background-image: url("../img/feat-img.jpg");
+  background-image: url("../img/2.jpg");
   background-size: cover;
   background-position: 50% 0px;
   overflow: hidden;
@@ -188,6 +188,8 @@ html, body {
       font-weight: 300;
       border-bottom: 1px solid #49b03a;
       padding-bottom: 7px; }
+    .about .card .card-block img {
+      height: 50%; }
     .about .card .card-block .btn {
       position: relative;
       height: 52px;
@@ -272,6 +274,11 @@ html, body {
   margin-bottom: 20px;
   font-weight: 300;
   letter-spacing: 3px; }
+.photos .carousel {
+  height: 600px; }
+  .photos .carousel img {
+    height: 600px;
+    width: 1110px; }
 .photos .btn {
   position: absolute;
   bottom: 125px;
