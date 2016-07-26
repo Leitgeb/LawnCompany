@@ -39,3 +39,20 @@ $(document).ready(function(){
   
 scrollEvent('.main-nav', 'nav-scroll-style');
 scrollEvent('.phone', 'phone-scroll-style');
+
+
+$(".removal img").mouseenter(function() {
+    $(".removal img")
+        .fadeOut(300, function() {
+            $(".removal img").attr('src', "img/removalAfter.jpg");
+        })
+        .fadeIn(300)
+});
+
+$(".removal img").mouseleave(function() {
+    $(".removal img")
+        .fadeOut(300, function() {
+            $(".removal img").attr('src', "img/removalBefore.jpg");
+        })
+        .fadeIn(300)
+});

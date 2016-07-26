@@ -15,6 +15,29 @@ html, body {
   html a, body a {
     text-decoration: none; }
 
+#header-photos .navbar-toggler {
+  color: #49b03a; }
+#header-photos .phone {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  color: #49b03a;
+  font-weight: 100;
+  z-index: 1500; }
+#header-photos h1 {
+  font-size: 100px;
+  font-weight: 100; }
+#header-photos .btn {
+  position: relative;
+  height: 50px;
+  width: 290px;
+  line-height: 25px;
+  border-radius: 0;
+  overflow: hidden;
+  transition: color 0.3s 0.05s ease;
+  color: #49b03a;
+  font-weight: 100; }
+
 #header {
   background-image: url("../img/2.jpg");
   background-size: cover;
@@ -492,6 +515,202 @@ html, body {
       .main-footer textarea,
       .main-footer input[type=submit],
       .main-footer input[type=text] {
+        font-size: 0.9em; } }
+
+.photo-nav {
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.4s; }
+  .photo-nav .navbar-brand {
+    color: #49b03a; }
+    .photo-nav .navbar-brand h2 {
+      display: inline;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 100; }
+  .photo-nav li {
+    height: 40px;
+    padding: 0 0; }
+    .photo-nav li .svg-wrapper {
+      height: 40px;
+      position: relative;
+      width: 127px;
+      text-align: center;
+      text-decoration: none; }
+    .photo-nav li .shape {
+      fill: transparent;
+      stroke-dasharray: 120 540;
+      stroke-dashoffset: -170;
+      stroke-width: 3px;
+      stroke: #49b03a; }
+    .photo-nav li .text {
+      color: #49b03a;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      font-weight: 100;
+      position: relative;
+      top: -37px;
+      width: 127px;
+      height: 40px; }
+@keyframes draw {
+  0% {
+    stroke-dasharray: 120 540;
+    stroke-dashoffset: -170;
+    stroke-width: 3px; }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px; } }
+    .photo-nav li .svg-wrapper:hover .shape {
+      -webkit-animation: 0.4s draw linear forwards;
+      animation: 0.4s draw linear forwards; }
+
+.main-content {
+  margin-top: 200px; }
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap; }
+  .photo-gallery .photo {
+    flex: 1;
+    margin: 25px 12px;
+    width: 358px;
+    height: 269px; }
+
+.photo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  color: white;
+  text-align: center;
+  background: #49b03a;
+  padding: 2em;
+  margin-top: 30px; }
+  .photo-footer h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 100; }
+  .photo-footer p {
+    margin-top: 12px;
+    text-align: left;
+    padding-left: 45px; }
+  .photo-footer fieldset {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 37px;
+    background: rgba(255, 255, 255, 0.3); }
+  .photo-footer .check-box-group {
+    display: flex;
+    flex-direction: row; }
+  .photo-footer .check-col {
+    flex: 1; }
+  .photo-footer legend {
+    padding-top: 45px;
+    padding-left: 12px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 100; }
+  .photo-footer .item {
+    flex: 1; }
+  .photo-footer .itemRight {
+    align-self: flex-end; }
+    .photo-footer .itemRight .footer-img {
+      width: 70%;
+      border: 2px double white;
+      border-top-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      margin-bottom: 20px;
+      margin-top: 105px;
+      margin-left: auto;
+      margin-right: auto; }
+    .photo-footer .itemRight .footerNav {
+      margin-bottom: 40px;
+      margin-top: 12px; }
+    .photo-footer .itemRight .dev {
+      font-size: 12px;
+      font-weight: 100;
+      color: rgba(255, 255, 255, 0.5); }
+  .photo-footer a {
+    margin: 0 12px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease; }
+    .photo-footer a:hover {
+      color: white;
+      text-decoration: none; }
+  .photo-footer textarea,
+  .photo-footer input[type=submit],
+  .photo-footer input[type=text] {
+    width: 93%;
+    display: block;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-top: 5px;
+    padding-left: 12px;
+    border: none;
+    transition: background 0.4s ease;
+    background: rgba(255, 255, 255, 0.3); }
+  .photo-footer input[type="checkbox"] {
+    display: none; }
+  .photo-footer input[type="checkbox"] + label:before {
+    border: 1px solid white;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 .25em 0 0;
+    padding: 0;
+    width: 16px; }
+  .photo-footer input[type="checkbox"]:checked + label:before {
+    background: white;
+    color: #49b03a;
+    content: "\2713";
+    text-align: center; }
+  .photo-footer input[type="checkbox"]:checked + label:after {
+    font-weight: bold; }
+  .photo-footer input[type=submit] {
+    color: white; }
+  .photo-footer ::-webkit-input-placeholder {
+    color: white;
+    font-weight: 100; }
+  .photo-footer ::-ms-input-placeholder {
+    color: white;
+    font-weight: 100; }
+  .photo-footer :-ms-input-placeholder {
+    color: white;
+    font-weight: 100; }
+  .photo-footer textarea {
+    font-size: 16px; }
+  .photo-footer input[type=submit] {
+    border: 1px solid white;
+    letter-spacing: 3px;
+    font-weight: 100;
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.4s; }
+  .photo-footer input[type=submit]:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #49b03a;
+    cursor: pointer; }
+  .photo-footer textarea:focus,
+  .photo-footer input[type=text]:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1); }
+  @media (max-width: 900px) {
+    .photo-footer {
+      flex-direction: column-reverse; }
+      .photo-footer h3 {
+        font-size: 1.1em; }
+      .photo-footer textarea,
+      .photo-footer input[type=submit],
+      .photo-footer input[type=text] {
         font-size: 0.9em; } }
 
 /*# sourceMappingURL=main.css.map */
